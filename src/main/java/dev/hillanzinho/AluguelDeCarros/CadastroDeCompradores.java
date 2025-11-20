@@ -1,13 +1,13 @@
-package dev.hillanzinho.CadastrodeNinjas;
+package dev.hillanzinho.AluguelDeCarros;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CadastrodeNinjasApplication {
+public class CadastroDeCompradores {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CadastrodeNinjasApplication.class, args);
+		SpringApplication.run(CadastroDeCompradores.class, args);
 	}
 
 }

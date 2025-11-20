@@ -1,10 +1,10 @@
-package dev.hillanzinho.CadastrodeNinjas;
+package dev.hillanzinho.AluguelDeCarros;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CadastrodeNinjasApplicationTests {
+class CadastrodeCompradoresApplicationTests {
 
 	@Test
 	void contextLoads() {

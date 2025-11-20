@@ -1,13 +1,15 @@
-package dev.hillanzinho.CadastrodeNinjas;
+package dev.hillanzinho.AluguelDeCarros.Compradores;
+
+import dev.hillanzinho.AluguelDeCarros.Carros.CarrosModel;
 
 import jakarta.persistence.*;
 
-import javax.swing.table.TableColumn;
+import java.util.List;
 
 // Entity Ninja no BD
 @Entity
 @Table (name = "tb_cadastro")
-public class NinjaModel {
+public class CompradoresModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,13 +18,14 @@ public class NinjaModel {
     private String email;
     private int idade;
     private String senha;
+    private List<CarrosModel> missoes;
 
     // Construtor "No args"
-    public NinjaModel() {
+    public CompradoresModel() {
     }
 
     // Construtor "all args"
-    public NinjaModel(String nome, String email, int idade, String senha) {
+    public CompradoresModel(String nome, String email, int idade, String senha) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
