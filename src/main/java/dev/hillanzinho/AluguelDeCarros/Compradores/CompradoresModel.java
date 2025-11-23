@@ -18,7 +18,9 @@ public class CompradoresModel {
     private String email;
     private int idade;
     private String senha;
-    private List<CarrosModel> missoes;
+    // Um comprador pode ter vários carros
+    @OneToMany(mappedBy = "comprador")
+    private List<CarrosModel> carros;
 
     // Construtor "No args"
     public CompradoresModel() {

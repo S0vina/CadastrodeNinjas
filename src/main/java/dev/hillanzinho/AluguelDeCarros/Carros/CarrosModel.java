@@ -14,6 +14,9 @@ public class CarrosModel {
     private String descricao;
     private String especificacoes;
     private boolean estado; // True para alugado e False para nao alugado
+    // Um carro só pode ter um comprador
+    @ManyToOne
+    @JoinColumn(name = "compradoresId")
     private CompradoresModel comprador;
 
     // Construtor no args
