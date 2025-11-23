@@ -2,9 +2,15 @@ package dev.hillanzinho.AluguelDeCarros.Carros;
 
 import dev.hillanzinho.AluguelDeCarros.Compradores.CompradoresModel;
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
 @Table(name = "tb_carros")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class CarrosModel {
 
     @Id
@@ -18,26 +24,4 @@ public class CarrosModel {
     @ManyToOne
     @JoinColumn(name = "compradoresId")
     private CompradoresModel comprador;
-
-    // Construtor no args
-    public CarrosModel() {
-    }
-
-    public CarrosModel(String descricao, String modelo, String especificacoes) {
-        this.modelo = modelo;
-        this.descricao = descricao;
-        this.especificacoes = especificacoes;
-    }
-
-    public String getDescricao() {return this.descricao;}
-
-    public void setDescricao(String descricao){this.descricao = descricao;}
-
-    public String getDificuldade() {return modelo;}
-
-    public void setDificuldade(String modelo) {this.modelo = modelo;}
-
-    public String getEspecificacoes() {return this.especificacoes;}
-
-    public void setEspecificacoes(String especificacoes) {this.especificacoes = especificacoes;}
 }
